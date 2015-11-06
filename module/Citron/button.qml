@@ -1,13 +1,19 @@
 import QtQuick 2.5
-import QtQuick.Controls 1.3
+import QtQuick.Controls 1.4 as QtQuick
 import QtQuick.Controls.Styles 1.4
 
-Button 
+import Citron 1.0
+
+QtQuick.Button
 {
     id: root;
 
-    property string backgroundColor: '';
-    property string textColor: '';
+    property bool narrow: false;
+    property string backgroundColor;
+    property string textColor;
+    property string size;
+
+    property string _size: Typo.resolve(size);
 
     style: ButtonStyle 
     {
@@ -15,15 +21,15 @@ Button
 
         padding 
         {
-            left: 32;
-            right: 32;
-            top: 16;
-            bottom: 16;
+            left: narrow ? _size : _size * 2;
+            right: narrow ? _size : _size * 2;
+            top: narrow ? _size / 2 : _size;
+            bottom: narrow ? _size / 2 : _size;
         }
 
         background: Rectangle 
         {
-            color: root.backgroundColor;
+            color: Color.resolve(root.backgroundColor);
             border.width: 0
             radius: 3
             scale: control.pressed ? 0.9 : 1;
@@ -42,12 +48,12 @@ Button
             }
         }
 
-        label: Label
+        label: QtQuick.Label
         {
             text: control.text;
-            color: '#e1ecfd';
+            color: Color.resolve(root.textColor);
             font.family: 'Helvetica Neue';
-            font.pointSize: 20
+            font.pointSize: root._size;
 
             states : State 
             {

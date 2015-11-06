@@ -1,3 +1,4 @@
 module Citron
 Button 1.0 button.qml
 singleton Color 1.0 color.qml
+singleton Typo 1.0 text.qml

@@ -1,5 +1,5 @@
 # Citron
-Citron is the ultimate front-end framework for native apps.
+Citron is the ultimate front-end framework for native apps. Require latest Qt.
 
 It is under active development, with Qt and QML.
 

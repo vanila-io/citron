@@ -4,23 +4,28 @@ import Citron 1.0
 
 Window {
     visible: true
+    width: 400;
+    height: 120;
 
-    MouseArea {
+
+    MouseArea
+    {
         anchors.fill: parent
-        onClicked: {
+        onClicked:
+        {
             Qt.quit();
         }
     }
 
-    Text {
-        text: qsTr("Hello World")
-        anchors.centerIn: parent
-    }
-
     Button
     {
-        text:'Cool!';
-        backgroundColor: Color.resolveColor('blue-50');
+        anchors.centerIn: parent;
+
+        text: 'Hello world!';
+        backgroundColor: 'blue-50';
+        textColor: 'white';
+        size: 's1';
+        narrow: true;
     }
 }
 
