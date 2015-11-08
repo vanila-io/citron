@@ -11,7 +11,6 @@ Window {
     {
         title: 'An awesome app';
         description: 'The incredible splash screen';
-        backgroundColor: 'orange-50';
         icon: 'action-based/get-information'
     }
 
@@ -29,7 +28,6 @@ Window {
         anchors.centerIn: parent;
 
         text: 'Hello world!';
-        backgroundColor: 'teal-60';
         textColor: 'white';
         size: 'm1';
         narrow: false;

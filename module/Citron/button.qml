@@ -9,7 +9,7 @@ QtQuick.Button
     id: root;
 
     property bool narrow: false;
-    property string backgroundColor;
+    property string backgroundColor: Theme.accentColor;
     property string textColor;
     property string size;
 

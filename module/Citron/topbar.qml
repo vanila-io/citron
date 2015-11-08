@@ -12,7 +12,7 @@ QtQuick.Rectangle
 	property string title: '';
 	property string icon: '';
 	property string description: '';
-	property string backgroundColor;
+	property string backgroundColor: Citron.Theme.primaryColor;
 
 	x: 0;
 	y: 0;
