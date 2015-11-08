@@ -13,7 +13,7 @@ QtQuick.Button
     property string textColor;
     property string size;
 
-    property string _size: Typo.resolve(size);
+    property string _size: Size.resolve(size);
 
     style: ButtonStyle 
     {

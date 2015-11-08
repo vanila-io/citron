@@ -4,9 +4,16 @@ import Citron 1.0
 
 Window {
     visible: true
-    width: 400;
-    height: 120;
+    width: 640;
+    height: 480;
 
+    TopBar
+    {
+        title: 'An awesome app';
+        description: 'The incredible splash screen';
+        backgroundColor: 'orange-50';
+        icon: 'action-based/get-information'
+    }
 
     MouseArea
     {
@@ -22,10 +29,10 @@ Window {
         anchors.centerIn: parent;
 
         text: 'Hello world!';
-        backgroundColor: 'blue-50';
+        backgroundColor: 'teal-60';
         textColor: 'white';
-        size: 's1';
-        narrow: true;
+        size: 'm1';
+        narrow: false;
     }
 }
 
