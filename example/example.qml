@@ -14,23 +14,49 @@ Window {
         icon: 'action-based/get-information'
     }
 
-    MouseArea
+    Row
     {
-        anchors.fill: parent
-        onClicked:
+        anchors.centerIn: parent;
+        spacing: 10;
+
+        Column
         {
-            Qt.quit();
+            spacing: 10;
+
+            Button
+            {
+                text: 'A large button';
+                textColor: 'white';
+                size: 'm1';
+                narrow: false;
+            }
+
+            Button
+            {
+                text: 'A narrow button';
+                textColor: 'white';
+                size: 'm1';
+                narrow: true;
+            }
+        }
+
+        Column
+        {
+            spacing: 10;
+
+            CheckBox
+            {
+                text: 'Checked'
+                checked: true;
+            }
+
+            CheckBox
+            {
+                text: 'Unchecked'
+                checked: false;
+            }
         }
     }
 
-    Button
-    {
-        anchors.centerIn: parent;
-
-        text: 'Hello world!';
-        textColor: 'white';
-        size: 'm1';
-        narrow: false;
-    }
 }
 

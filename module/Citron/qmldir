@@ -6,3 +6,4 @@ Label 1.0 label.qml
 Button 1.0 button.qml
 TopBar 1.0 topbar.qml
 Icon 1.0 icon.qml
+CheckBox 1.0 checkbox.qml

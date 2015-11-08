@@ -1,10 +1,10 @@
-import QtQuick 2.5
-import QtQuick.Controls 1.4 as QtQuick
+import QtQuick 2.5 as QtQuick
+import QtQuick.Controls 1.4 as QtQuickControls
 import QtQuick.Controls.Styles 1.4
 
 import Citron 1.0
 
-QtQuick.Button
+QtQuickControls.Button
 {
     id: root;
 
@@ -27,45 +27,44 @@ QtQuick.Button
             bottom: narrow ? _size / 2 : _size;
         }
 
-        background: Rectangle 
+        background: QtQuick.Rectangle 
         {
             color: Color.resolve(root.backgroundColor);
             border.width: 0
             radius: 3
             scale: control.pressed ? 0.9 : 1;
 
-            states : State 
+            states : QtQuick.State 
             {
                 name: 'clicked';
                 when: control.pressed;
 
-                PropertyChanges { target: parent; scale: '0.9'; }
+                QtQuick.PropertyChanges { target: parent; scale: '0.9'; }
             }
 
-            transitions: Transition 
+            transitions: QtQuick.Transition 
             {
-                NumberAnimation { properties: 'scale'; duration: animationDuration; }
+                QtQuick.NumberAnimation { properties: 'scale'; duration: animationDuration; }
             }
         }
 
-        label: QtQuick.Label
+        label: Label
         {
             text: control.text;
-            color: Color.resolve(root.textColor);
-            font.family: 'Helvetica Neue';
-            font.pointSize: root._size;
+            style: root.textColor;
+            size: root.size;
 
-            states : State 
+            states : QtQuick.State 
             {
                 name: 'clicked';
                 when: control.pressed;
 
-                PropertyChanges { target: parent; scale: '0.9'; }
+                QtQuick.PropertyChanges { target: parent; scale: '0.9'; }
             }
 
-            transitions: Transition 
+            transitions: QtQuick.Transition 
             {
-                NumberAnimation { properties: 'scale'; duration: animationDuration; }
+                QtQuick.NumberAnimation { properties: 'scale'; duration: animationDuration; }
             }
         }
     }
