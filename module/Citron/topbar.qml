@@ -34,6 +34,11 @@ QtQuick.Rectangle
 
 		spacing: 5;
 
+		Citron.Icon
+		{
+			name: root.icon;
+		}
+
 		Citron.Label
 		{
 			size: 'm1';

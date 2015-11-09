@@ -11,7 +11,7 @@ Window {
     {
         title: 'An awesome app';
         description: 'The incredible splash screen';
-        icon: 'action-based/get-information'
+        icon: 'globe'
     }
 
     Row

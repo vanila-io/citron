@@ -1,7 +1,8 @@
 module Citron
 singleton Color 1.0 color.qml
 singleton Size 1.0 size.qml
-singleton Theme 1.0 theme.qml 
+singleton Theme 1.0 theme.qml
+AwesomeIconList 1.0 awesome.js
 Label 1.0 label.qml
 Button 1.0 button.qml
 TopBar 1.0 topbar.qml

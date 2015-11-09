@@ -7,7 +7,7 @@ QtObject
 	function resolve(name)
 	{
 		if(!name)
-			name = 'm2';
+			name = 'm1';
 			
 		var r = size[name];
 
