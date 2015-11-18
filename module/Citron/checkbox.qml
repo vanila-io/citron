@@ -9,7 +9,7 @@ QtQuickControls.CheckBox
 	style: CheckBoxStyle
 	{
 
-		property int animationDuration: 125;
+		property int animationDuration: 175;
 
 		label: Citron.Label
         {
@@ -32,17 +32,32 @@ QtQuickControls.CheckBox
                 anchors.fill: parent;
                 scale: 0;
 
+                Citron.Icon
+                {
+                    id: checkIcon;
+
+                    anchors.centerIn: parent;
+
+                    name: 'check';
+                    color: 'white';
+                    size: '12';
+
+                    rotation: 180;
+                }
+
 	            states : QtQuick.State 
 	            {
 	                name: 'checked';
 	                when: control.checked;
 
 	                QtQuick.PropertyChanges { target: checkedIndicator; scale: '1'; }
+                    QtQuick.PropertyChanges { target: checkIcon; rotation: '0'; }
 	            }
 
-	            transitions: QtQuick.Transition 
+                transitions: QtQuick.Transition 
 	            {
 	                QtQuick.NumberAnimation { properties: 'scale'; duration: animationDuration; }
+                     QtQuick.NumberAnimation { properties: 'rotation'; duration: animationDuration; }
 	            }
             }
         }
