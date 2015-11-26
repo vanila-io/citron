@@ -30,9 +30,9 @@ QtQuickControls.Button
         background: QtQuick.Rectangle 
         {
             color: Color.resolve(root.backgroundColor);
-            border.width: 0
-            radius: 3
-            scale: control.pressed ? 0.9 : 1;
+            border.width: 0;
+            radius: 3;
+            scale: 1;
 
             states : QtQuick.State 
             {
