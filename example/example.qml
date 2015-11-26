@@ -15,80 +15,101 @@ Window {
         icon: 'globe'
     }
 
-    Row
+    Column
     {
         anchors.centerIn: parent;
         spacing: 10;
 
-        Column
+        Row
         {
+            anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 10;
 
-            Button
+            Column
             {
-                text: 'A large button';
-                textColor: 'white';
-                size: 'm1';
-                narrow: false;
+                spacing: 10;
+
+                Button
+                {
+                    text: 'A large button';
+                    textColor: 'white';
+                    size: 'm1';
+                    narrow: false;
+                }
+
+                Button
+                {
+                    text: 'A narrow button';
+                    textColor: 'white';
+                    size: 'm1';
+                    narrow: true;
+                }
             }
 
-            Button
+            Column
             {
-                text: 'A narrow button';
-                textColor: 'white';
-                size: 'm1';
-                narrow: true;
+                spacing: 10;
+
+                CheckBox
+                {
+                    text: 'Checked'
+                    checked: true;
+                }
+
+                CheckBox
+                {
+                    text: 'Unchecked'
+                    checked: false;
+                }
+            }
+
+            Column
+            {
+                spacing: 10;
+
+                Controls.ExclusiveGroup
+                {
+                    id: radiobuttons;
+                }
+
+                RadioButton
+                {
+                    text: 'First RadioButton';
+                    checked: true;
+                    exclusiveGroup: radiobuttons;
+                }
+
+                RadioButton
+                {
+                    text: 'Second RadioButton';
+                    exclusiveGroup: radiobuttons;
+                }
+            }
+
+            Column
+            {
+                ComboBox
+                {
+                    width: 200
+                    model: [ "Banana", "Apple", "Coconut", "Victor Collin" ]
+                }
             }
         }
 
-        Column
+        Row
         {
+            anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 10;
 
-            CheckBox
+            Slider
             {
-                text: 'Checked'
-                checked: true;
-            }
-
-            CheckBox
-            {
-                text: 'Unchecked'
-                checked: false;
+                width: 200;
+                minimumValue: 0;
+                maximumValue: 100;
+                value: 50;
             }
         }
 
-        Column
-        {
-            spacing: 10;
-
-            Controls.ExclusiveGroup
-            {
-                id: radiobuttons;
-            }
-
-            RadioButton
-            {
-                text: 'First RadioButton';
-                checked: true;
-                exclusiveGroup: radiobuttons;
-            }
-
-            RadioButton
-            {
-                text: 'Second RadioButton';
-                exclusiveGroup: radiobuttons;
-            }
-        }
-
-        Column
-        {
-            ComboBox
-            {
-                width: 200
-                model: [ "Banana", "Apple", "Coconut", "Victor Collin" ]
-            }
-        }
     }
 
 }
