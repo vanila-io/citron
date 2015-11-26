@@ -1,5 +1,6 @@
 import QtQuick 2.5
 import QtQuick.Window 2.2
+import QtQuick.Controls 1.4 as Controls
 import Citron 1.0
 
 Window {
@@ -54,6 +55,29 @@ Window {
             {
                 text: 'Unchecked'
                 checked: false;
+            }
+        }
+
+        Column
+        {
+            spacing: 10;
+
+            Controls.ExclusiveGroup
+            {
+                id: radiobuttons;
+            }
+
+            RadioButton
+            {
+                text: 'First RadioButton';
+                checked: true;
+                exclusiveGroup: radiobuttons;
+            }
+
+            RadioButton
+            {
+                text: 'Second RadioButton';
+                exclusiveGroup: radiobuttons;
             }
         }
     }
