@@ -80,6 +80,15 @@ Window {
                 exclusiveGroup: radiobuttons;
             }
         }
+
+        Column
+        {
+            ComboBox
+            {
+                width: 200
+                model: [ "Banana", "Apple", "Coconut", "Victor Collin" ]
+            }
+        }
     }
 
 }

@@ -9,3 +9,4 @@ TopBar 1.0 topbar.qml
 Icon 1.0 icon.qml
 CheckBox 1.0 checkbox.qml
 RadioButton 1.0 radiobutton.qml
+ComboBox 1.0 combobox.qml
