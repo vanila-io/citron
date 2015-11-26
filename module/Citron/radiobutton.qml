@@ -6,7 +6,7 @@ import Citron 1.0 as Citron
 
 QtQuickControls.RadioButton
 {
-	property int animationDuration: 175;
+	property int animationDuration: 150;
 
 	style: RadioButtonStyle
 	{
