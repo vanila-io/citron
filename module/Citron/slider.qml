@@ -13,16 +13,14 @@ QtQuickControls.Slider
 	{
 		groove: QtQuick.Rectangle 
 		{
-            id: _groove;
             implicitWidth: control.width;
-            implicitHeight: 4
+            implicitHeight: 4;
             color: Citron.Color.resolve(Citron.Theme.primaryColor);
             radius: 2;
         }
 
         handle: QtQuick.Rectangle
         {
-            id: _handle;
             anchors.centerIn: parent
             color: Citron.Color.resolve(Citron.Theme.accentColor);
             implicitWidth: 16
@@ -30,23 +28,29 @@ QtQuickControls.Slider
             radius: 3;
         }
 
-        tickmarks: QtQuick.Rectangle
+        tickmarks: QtQuick.Item
         {
-            x: (control.value / 100 * (control.width - styleData.handleWidth));
-            y: 18;
+            height: 3;
 
-            implicitWidth: 15;
-            height: 30;
-            radius: 8;
-
-            color: Citron.Color.resolve(Citron.Theme.primaryColor);
-            
-            Citron.Label
+            QtQuick.Rectangle
             {
-            	text: control.value;
-                style: 'white';
+                x: (control.value / 100 * (control.width - styleData.handleWidth));
+                y: 20;
+
+                implicitWidth: 20;
+                height: 20;
+                radius: 8;
+
+                color: Citron.Color.resolve(Citron.Theme.primaryColor);
+                
+                Citron.Label
+                {
+                    anchors.centerIn: parent;
+                    text: control.value;
+                    style: 'white';
+                }
             }
-        } 
+        }
 
 	}
 }
