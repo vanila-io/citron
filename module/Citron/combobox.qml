@@ -8,6 +8,8 @@ QtQuickControls.ComboBox
 {
 	menu: null;
 
+	property int animationDuration: 225;
+
 	style: ComboBoxStyle
 	{
 		textColor: 'black';
@@ -27,6 +29,48 @@ QtQuickControls.ComboBox
 			color: Citron.Color.resolve(Citron.Theme.backgroundColor);
 			border.width: 1;
 			border.color: Citron.Color.resolve(Citron.Theme.primaryColor);
+
+			QtQuick.Rectangle
+			{
+				anchors.right: parent.right;
+
+				height: parent.height;
+				width: parent.height;
+
+				border.width: 1;
+				border.color: Citron.Color.resolve(Citron.Theme.primaryColor);
+
+				Citron.Icon
+				{
+					id: arrowIcon;
+					anchors.centerIn: parent;
+					style: Citron.Color.resolve(Citron.Theme.primaryColor);
+
+					name: 'arrow_up';
+
+					rotation: 180;
+
+					states : [QtQuick.State 
+		            {
+		                name: 'pressed';
+		                when: control.pressed;
+
+	                    QtQuick.PropertyChanges { target: arrowIcon; rotation: '0'; }
+		            },
+		            QtQuick.State
+		            {
+		            	name: 'pressedBis';
+		                when: control.pressed;
+
+	                    QtQuick.PropertyChanges { target: arrowIcon; rotation: '360'; }
+		            }]
+
+	                transitions: QtQuick.Transition 
+		            {
+	                    QtQuick.NumberAnimation { properties: 'rotation'; duration: animationDuration; }
+		            }
+				}
+			}
 		}
 	}
 }
