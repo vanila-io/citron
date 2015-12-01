@@ -34,12 +34,12 @@ QtQuickControls.Slider
 
             QtQuick.Rectangle
             {
-                x: (control.value / 100 * (control.width - styleData.handleWidth));
-                y: 20;
+                x: (control.value / 100 * (control.width - styleData.handleWidth)) - 3;
+                y: 19;
 
-                implicitWidth: 20;
-                height: 20;
-                radius: 8;
+                implicitWidth: 23;
+                height: 23;
+                radius: 6;
 
                 color: Citron.Color.resolve(Citron.Theme.primaryColor);
                 
