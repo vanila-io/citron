@@ -136,5 +136,21 @@ Window {
                 indeterminate: true;
             }
         }
+
+        Row
+        {
+            anchors.horizontalCenter: parent.horizontalCenter;
+            spacing: 10;
+
+            Switch
+            {
+                checked: true;
+            }
+
+            Switch
+            {
+                checked: false;
+            }
+        }
     }
 }

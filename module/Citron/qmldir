@@ -12,3 +12,4 @@ RadioButton 1.0 radiobutton.qml
 ComboBox 1.0 combobox.qml
 Slider 1.0 slider.qml
 ProgressBar 1.0 progressbar.qml
+Switch 1.0 switch.qml
