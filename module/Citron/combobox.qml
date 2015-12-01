@@ -6,8 +6,6 @@ import Citron 1.0 as Citron
 
 QtQuickControls.ComboBox
 {
-	menu: null;
-
 	property int animationDuration: 225;
 
 	style: ComboBoxStyle
