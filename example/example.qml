@@ -103,14 +103,38 @@ Window {
 
             Slider
             {
+                anchors.verticalCenter: parent.verticalCenter;
+
+                id: slider;
+                //tickmarksEnabled: true;
                 width: 200;
                 minimumValue: 0;
                 maximumValue: 100;
                 value: 50;
             }
+
+            ProgressBar
+            {
+                anchors.verticalCenter: parent.verticalCenter;
+
+                minimumValue: 0;
+                maximumValue: 100;
+                value: slider.value;
+            }
         }
 
+        Row
+        {
+            anchors.horizontalCenter: parent.horizontalCenter;
+            spacing: 10;
+
+            ProgressBar
+            {
+                anchors.verticalCenter: parent.verticalCenter;
+                width: 200;
+                height: 5;
+                indeterminate: true;
+            }
+        }
     }
-
 }
-

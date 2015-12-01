@@ -6,7 +6,6 @@ import Citron 1.0 as Citron
 
 QtQuickControls.Slider
 {
-	tickmarksEnabled: true;
     stepSize: 1;
 
 	style: SliderStyle
